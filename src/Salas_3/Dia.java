@@ -39,10 +39,14 @@ public class Dia {
         this.segmentos = segmentos;
     }
 
-    @Override
-    public String toString() {
-        return "Dia{" + "fecha=" + fecha + ", nombre=" + nombre + ", segmentos=" + segmentos + '}';
+    public void addSegmento(Segmento a){
+        this.segmentos.add(a);
     }
-   
+   public void mostrarSegmento(){
+       for(int i=0; i < segmentos.size();i++){
+           System.out.println("Hora Inicial: "+segmentos.get(i).getHoraInicio());
+           System.out.println("Hora Final: "+ segmentos.get(i).getHoraFinal());
+       }
+   }
 
 }

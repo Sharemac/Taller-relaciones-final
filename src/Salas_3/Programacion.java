@@ -18,8 +18,20 @@ public class Programacion {
     public void setSalas(ArrayList<Sala> salas) {
         this.salas = salas;
     }
+    
+    public void addSala(Sala a){
+        this.salas.add(a);                
+    }
+    
+    public void mostarSala(){
+        for(int i = 0; i < salas.size();i++){
+            System.out.println("\nSala: "+ salas.get(i).getNumero());
+            salas.get(i).mostrarSemana();
+        }
+        System.out.println("\n");
+    }
    
- public void listar(){
+ /*public void listar(){
      for(int i = 0; i < salas.size(); i++){
      System.out.println("Programacion sala "+ salas.get(i).getNumero() +":");
      for(int j=0 ; j < salas.get(i).getSem().size();j++){
@@ -36,10 +48,9 @@ public class Programacion {
      }   
      
      
-     
-         System.out.println("\n");
- }
+     */
+
+  
    
-   
- }
+ 
 }

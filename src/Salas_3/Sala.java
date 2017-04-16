@@ -29,5 +29,14 @@ public class Sala {
         this.sem = sem;
     }
      
+    public void addSem(Semana a){
+        this.sem.add(a);
+    }
     
+    public void mostrarSemana(){
+        for(int i=0; i < sem.size(); i++){
+           sem.get(i).mostrarDias();
+            
+        }
+    }
 }

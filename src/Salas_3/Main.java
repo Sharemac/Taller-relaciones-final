@@ -9,31 +9,33 @@ public class Main {
         ArrayList<Semana> sem;
         ArrayList<Semana> sema;
         ArrayList<Sala> salas;
-        Dia di1[]= new Dia[2];
-        Dia di2[]= new Dia[2];
+        ArrayList<Dia> dia;
+        ArrayList<Dia> dias;
         Segmento segmento1 = new Segmento(2,4);
         Segmento segmento2 = new Segmento(8,10);
         
         seg = new ArrayList<Segmento>();
         seg.add(segmento1);
         seg.add(segmento2);
+               
+        Dia dia1 = new Dia("13/04/2017", "Jueves", seg);
+        Dia dia2 = new Dia("14/04/2017", "Viernes", seg);
+        Dia dia3 = new Dia("18/04/2017", "Martes", seg);
+        Dia dia4 = new Dia("19/04/2017", "Miercoles", seg);
         
-        Dia dia1 = new Dia("17/04/2017", "Lunes", seg);
-        Dia dia2 = new Dia("18/05/2018", "Martes", seg);
-        Dia dia3 = new Dia("19/06/2019", "Miercoles", seg);
-        Dia dia4 = new Dia("20/07/2016", "Jueves", seg);
+        dia = new ArrayList<Dia>();
+        dia.add(dia1);
+        dia.add(dia2);
         
-        di1[0]= dia1;
-        di1[1]= dia2;
+        dias = new ArrayList<Dia>();
+        dias.add(dia3);
+        dias.add(dia4);
                 
-        di2[0]= dia3;
-        di2[1]= dia4;  
-                
-        Semana semana1 = new Semana(1, di1);
-        Semana semana2 = new Semana(2, di1);
+        Semana semana1 = new Semana(1, dia);
+        Semana semana2 = new Semana(2, dias);
         
-        Semana seman1 = new Semana(1,di2);
-        Semana seman2 = new Semana(2,di2);
+        Semana seman1 = new Semana(1,dia);
+        Semana seman2 = new Semana(2,dias);
         
         sem = new ArrayList<Semana>();
         sem.add(semana1);
@@ -51,7 +53,8 @@ public class Main {
         salas.add(sala2);
         
         Programacion pro = new Programacion(salas);
-        pro.listar();
+        pro.mostarSala();
+        
         
         
         
