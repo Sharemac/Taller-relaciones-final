@@ -5,9 +5,10 @@ import java.util.ArrayList;
 
 public class Semana {
    private int numero;
-   private ArrayList<Dia> dias;
+   private Dia[] dias;
+  
 
-    public Semana(int numero, ArrayList<Dia> dias) {
+    public Semana(int numero, Dia[]dias) {
         this.numero = numero;
         this.dias = dias;
     }
@@ -18,26 +19,20 @@ public class Semana {
 
     public void setNumero(int numero) {
         this.numero = numero;
+       
     }
-
-    public ArrayList<Dia> getDias() {
-        return dias;
-    }
-
-    public void setDias(ArrayList<Dia> dias) {
+    public void setDias(Dia[]dias) {
+        for(int i=0; i < dias.length; i++){
         this.dias = dias;
     }
+    } 
     
-    public void addDia(Dia a){
-        this.dias.add(a);
-    }
     public void mostrarDias(){
         System.out.println("\nSemana: "+ numero);
-        for(int i=0; i < dias.size(); i++){
-            System.out.println(""+ dias.get(i).getFecha());
-            System.out.println(""+ dias.get(i).getNombre());
-            dias.get(i).mostrarSegmento();
+        for(int i=0; i < dias.length; i++){
+            System.out.println(" "+ dias[i].getFecha() );
+            System.out.println(" "+ dias[i].getNombre());
+            dias[i].mostrarSegmento();
         }
     }
 }
-  

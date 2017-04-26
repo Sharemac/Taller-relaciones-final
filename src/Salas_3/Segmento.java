@@ -26,6 +26,4 @@ public class Segmento {
     public void setHoraFinal(int horaFinal) {
         this.horaFinal = horaFinal;
     }
-
-    
 }
